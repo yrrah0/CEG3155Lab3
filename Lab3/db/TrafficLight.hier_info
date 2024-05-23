@@ -1,0 +1,79 @@
+|testBench
+mstl[0] <= TrafficController:inst.mstl[0]
+mstl[1] <= TrafficController:inst.mstl[1]
+mstl[2] <= TrafficController:inst.mstl[2]
+clk => TrafficController:inst.clk
+resetn => TrafficController:inst.resetn
+sscs => TrafficController:inst.sscs
+ctep => TrafficController:inst.ctep
+slct[0] <= TrafficController:inst.slct[0]
+slct[1] <= TrafficController:inst.slct[1]
+sstl[0] <= TrafficController:inst.sstl[0]
+sstl[1] <= TrafficController:inst.sstl[1]
+sstl[2] <= TrafficController:inst.sstl[2]
+
+
+|testBench|TrafficController:inst
+clk => enARdFF_2:generateDFF:3:dFFInst.i_clock
+clk => enARdFF_2:generateDFF:2:dFFInst.i_clock
+clk => enARdFF_2:generateDFF:1:dFFInst.i_clock
+clk => enARdFF_2:generateDFF:0:dFFInst.i_clock
+resetn => enARdFF_2:generateDFF:3:dFFInst.i_resetBar
+resetn => enARdFF_2:generateDFF:2:dFFInst.i_resetBar
+resetn => enARdFF_2:generateDFF:1:dFFInst.i_resetBar
+resetn => enARdFF_2:generateDFF:0:dFFInst.i_resetBar
+sscs => signalD.IN1
+ctep => signalD.IN1
+ctep => signalD.IN1
+ctep => signalD.IN1
+ctep => signalD.IN1
+ctep => signalD.IN1
+ctep => signalD[0].IN1
+slct[0] <= slct.DB_MAX_OUTPUT_PORT_TYPE
+slct[1] <= enARdFF_2:generateDFF:2:dFFInst.o_q
+enct <= enARdFF_2:generateDFF:0:dFFInst.o_q
+ldct <= enARdFF_2:generateDFF:0:dFFInst.o_q
+mstl[0] <= mstl.DB_MAX_OUTPUT_PORT_TYPE
+mstl[1] <= mstl.DB_MAX_OUTPUT_PORT_TYPE
+mstl[2] <= enARdFF_2:generateDFF:2:dFFInst.o_q
+sstl[0] <= sstl.DB_MAX_OUTPUT_PORT_TYPE
+sstl[1] <= sstl.DB_MAX_OUTPUT_PORT_TYPE
+sstl[2] <= enARdFF_2:generateDFF:2:dFFInst.o_q
+
+
+|testBench|TrafficController:inst|enARdFF_2:\generateDFF:3:dFFInst
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testBench|TrafficController:inst|enARdFF_2:\generateDFF:2:dFFInst
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testBench|TrafficController:inst|enARdFF_2:\generateDFF:1:dFFInst
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testBench|TrafficController:inst|enARdFF_2:\generateDFF:0:dFFInst
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
